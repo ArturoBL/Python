@@ -1,0 +1,52 @@
+
+*virtualenv:
+Install:
+	pip install virtualenv
+Create:
+	virtualenv <environment name>
+Activate:
+	.\<environment name>\Scripts\activate
+
+
+
+*venv:
+Create:
+	python -m venv <path to virtual environment>
+Activate:
+	<path to virtual environment>\activate.bat
+Update python on virtual environment:
+	python -m venv /path/to/venv --upgrade
+
+
+
+*Conda:
+Create:
+	conda create -n <environment name> python=x.x anaconda
+Activate:
+	conda activate <environment name>
+Activate from Anaconda prompt:
+	activate <environment name>
+Deactivate:
+	conda deactivate
+Clone:
+	conda create --name myclone --clone <environment name>
+Delete:
+	conda remove -n <environment name> -all
+install packages:
+	conda install -n <environment name> package
+List packages:
+	conda list
+List packages in a specific environment:
+	conda list -n myenv
+List explicit packages:
+	conda list --explicit
+list explicit packages to file:
+	conda list --explicit > spec-file.txt
+List environments:
+	conda env list
+Create environment from spec file:
+	conda create --name myenv --file spec-file.txt
+Install packages from a spec file:
+	conda install --name myenv --file spec-file.txt
+Install pip in conda environment:
+	conda install -n myenv pip	

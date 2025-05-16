@@ -1,0 +1,12 @@
+<catalogo>
+    <libro id="bk101">
+        <titulo>Python Básico</titulo>
+        <autor>Juan Pérez</autor>
+        <precio>29.99</precio>
+    </libro>
+    <libro id="bk102">
+        <titulo>XML para principiantes</titulo>
+        <autor>María López</autor>
+        <precio>19.99</precio>
+    </libro>
+</catalogo>

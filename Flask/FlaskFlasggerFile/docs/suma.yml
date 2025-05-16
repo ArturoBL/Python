@@ -1,0 +1,20 @@
+parameters:
+  - name: a
+    in: query
+    type: number
+    required: true
+    description: Primer número a sumar
+  - name: b
+    in: query
+    type: number
+    required: true
+    description: Segundo número a sumar
+responses:
+  200:
+    description: Resultado de la suma
+    schema:
+      type: object
+      properties:
+        resultado:
+          type: number
+          example: 8

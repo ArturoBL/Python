@@ -1,0 +1,23 @@
+app:
+  name: Monitor de Servicios
+  version: 1.0
+
+servidores:
+  - nombre: Servidor1
+    ip: 192.168.1.10
+    servicios:
+      - nombre: Apache
+        puerto: 80
+      - nombre: MySQL
+        puerto: 3306
+  - nombre: Servidor2
+    ip: 192.168.1.20
+    servicios:
+      - nombre: IIS
+        puerto: 80
+      - nombre: SQLServer
+        puerto: 1433
+
+notificaciones:
+  email: admin@empresa.com
+  activar: true

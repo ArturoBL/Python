@@ -1,0 +1,30 @@
+Para cientos de miles de filas:
+
+usar session.execute(insert(...), datos)
+insertar por lotes (chunks)
+desactivar logs (echo=False)
+evitar commit() por cada fila
+
+lote = []
+
+for i in range(10000):
+    lote.append({
+        "nombre": f"Usuario {i}",
+        "correo": f"user{i}@mail.com"
+    })
+
+session.execute(insert(Usuario), lote)
+session.commit()
+
+
+Para desactivar logs:
+
+from sqlalchemy import create_engine
+import logging
+
+logging.getLogger("sqlalchemy.engine").setLevel(logging.WARNING)
+
+engine = create_engine(
+    "sqlite:///mi_base.db",
+    echo=False
+)

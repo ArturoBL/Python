@@ -1,3 +1,6 @@
 fastapi
 python-jose
 bcrypt
+python-multipart
+uvicorn
+requests
